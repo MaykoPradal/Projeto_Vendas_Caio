@@ -236,13 +236,13 @@ namespace Projeto_Controle_Vendas.DAO
         #endregion
 
         //metodo buscar cliente por cpf
-        #region buscarclienteporcpf
+        /*#region buscarclienteporcpf
         public DataTable BuscarClientePorCPF(string cpf)
         {
             try
             {
                 DataTable tabelacliente = new DataTable();
-                string sql = "select * from tb_clientes where cpf = @cpf";
+                string sql = "select * from tb_clientes where cpf like @cpf";
 
                 MySqlCommand executacmd = new MySqlCommand(sql, conexao);
                 executacmd.Parameters.AddWithValue("@cpf", cpf);
@@ -265,6 +265,6 @@ namespace Projeto_Controle_Vendas.DAO
             }
         }
 
-        #endregion
+        #endregion*/
     }
 }

@@ -24,9 +24,10 @@ namespace Projeto_Controle_Vendas.VIEW
 
         }
 
+        //Botão novo e usado para limpar todos os campos da tela de cadastro funcionários
         private void btnnovo_Click(object sender, EventArgs e)
         {
-            
+            new Helpers().LimparTela(this);
         }
 
         //Botão Salvar
@@ -106,7 +107,7 @@ namespace Projeto_Controle_Vendas.VIEW
             tabelafuncionarios.DataSource = dao.listarFuncionarios();
         }
 
-        //Botão Pesquisar
+        //Botão Pesquisar funcionários
         private void btnpesquisa_Click(object sender, EventArgs e)
         {
             string nome = txtpesquisa.Text;
@@ -118,10 +119,30 @@ namespace Projeto_Controle_Vendas.VIEW
                 tabelafuncionarios.DataSource = dao.listarFuncionarios();
             }
         }
-
+        
+        //API buscar CEP
         private void btncep_Click_1(object sender, EventArgs e)
         {
+            try
+            {
+                string cep = txtcep.Text;
+                string xml = "https://viacep.com.br/ws/" + cep + "/xml/";
+                DataSet dados = new DataSet();
 
+                dados.ReadXml(xml);
+
+                txtendereco.Text = dados.Tables[0].Rows[0]["logradouro"].ToString();
+                txtbairro.Text = dados.Tables[0].Rows[0]["bairro"].ToString();
+                txtcidade.Text = dados.Tables[0].Rows[0]["localidade"].ToString();
+                txtcomplemento.Text = dados.Tables[0].Rows[0]["complemento"].ToString();
+                cbbuf.Text = dados.Tables[0].Rows[0]["uf"].ToString();
+
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("Endereço não encontrado, por favor preencha manualmente.");
+            }
         }
 
         private void FrmFuncionarios_Load(object sender, EventArgs e)
@@ -150,6 +171,15 @@ namespace Projeto_Controle_Vendas.VIEW
             txtcidade.Text = tabelafuncionarios.CurrentRow.Cells[15].Value.ToString();
             cbbuf.Text = tabelafuncionarios.CurrentRow.Cells[16].Value.ToString();
             tabFuncionarios.SelectedTab = tabPage1;
+        }
+
+        //Pesquisa funcionário por aproximação usando % do método like
+        private void txtpesquisa_TextChanged(object sender, EventArgs e)
+        {
+            string nome = "%" + txtpesquisa.Text + "%";
+
+            FuncionarioDAO dao = new FuncionarioDAO();
+            tabelafuncionarios.DataSource = dao.listarFuncionariosPorNome(nome);
         }
     }
 }

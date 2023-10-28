@@ -175,7 +175,7 @@ namespace Projeto_Controle_Vendas.DAO
             try
             {
                 DataTable tabelafuncionarios = new DataTable();
-                string sql = "select * from tb_funcionarios where = @nome";
+                string sql = "select * from tb_funcionarios where nome = @nome";
 
                 MySqlCommand executacmd = new MySqlCommand(sql, conexao);
                 executacmd.Parameters.AddWithValue("@nome", nome);
@@ -200,5 +200,41 @@ namespace Projeto_Controle_Vendas.DAO
 
         #endregion
 
+        //lista funcionários pelo método like
+        #region listarFuncionariosPorNome 
+
+        public DataTable listarFuncionariosPorNome(string nome)
+        {
+            try
+            {
+                //1 passo - Criar o DataTable e o comando sql  
+                DataTable tabelafuncionarios = new DataTable();
+                string sql = "select * from tb_funcionarios where nome like @nome";
+
+                //2 passo - Organizar o comando sql e executar
+                MySqlCommand executacmd = new MySqlCommand(sql, conexao);
+                executacmd.Parameters.AddWithValue("@nome", nome);
+                conexao.Open();
+                executacmd.ExecuteNonQuery();
+
+                //3 passo - Criar o MySqlDataAdapter para preencher os dados no DataTable
+                MySqlDataAdapter da = new MySqlDataAdapter(executacmd);
+                da.Fill(tabelafuncionarios);
+
+                conexao.Close();
+
+                return tabelafuncionarios;
+            }
+            catch (Exception erro)
+            {
+
+                MessageBox.Show("Erro ao executar o comando sql: " + erro);
+                return null;
+            }
+        }
+
+
+
+        #endregion
     }
 }

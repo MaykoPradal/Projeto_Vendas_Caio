@@ -1,6 +1,6 @@
 ﻿namespace Projeto_Controle_Vendas.VIEW
 {
-    partial class Frmclientes
+    partial class FrmFornecedores
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.tbClientes = new System.Windows.Forms.TabControl();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.tbFornecedores = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.btncep = new System.Windows.Forms.Button();
             this.cbbuf = new System.Windows.Forms.ComboBox();
@@ -48,45 +50,65 @@
             this.txtcelular = new System.Windows.Forms.MaskedTextBox();
             this.label22 = new System.Windows.Forms.Label();
             this.txttelefone = new System.Windows.Forms.MaskedTextBox();
-            this.txtcpf = new System.Windows.Forms.MaskedTextBox();
-            this.txtrg = new System.Windows.Forms.MaskedTextBox();
+            this.txtcnpj = new System.Windows.Forms.MaskedTextBox();
             this.label23 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
             this.txtemail = new System.Windows.Forms.TextBox();
             this.label26 = new System.Windows.Forms.Label();
             this.txtnome = new System.Windows.Forms.TextBox();
             this.label27 = new System.Windows.Forms.Label();
             this.txtcodigo = new System.Windows.Forms.TextBox();
             this.label28 = new System.Windows.Forms.Label();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.tabelaFornecedores = new System.Windows.Forms.DataGridView();
+            this.btnpesquisa = new System.Windows.Forms.Button();
+            this.txtpesquisa = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.btnexcluir = new System.Windows.Forms.Button();
             this.btneditar = new System.Windows.Forms.Button();
             this.btnsalvar = new System.Windows.Forms.Button();
             this.btnnovo = new System.Windows.Forms.Button();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.tabelaclientes = new System.Windows.Forms.DataGridView();
-            this.btnpesquisa = new System.Windows.Forms.Button();
-            this.txtpesquisa = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.lbl = new System.Windows.Forms.Label();
-            this.tbClientes.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.tbFornecedores.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tabelaclientes)).BeginInit();
-            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tabelaFornecedores)).BeginInit();
             this.SuspendLayout();
             // 
-            // tbClientes
+            // panel1
             // 
-            this.tbClientes.Controls.Add(this.tabPage1);
-            this.tbClientes.Controls.Add(this.tabPage2);
-            this.tbClientes.Font = new System.Drawing.Font("Perpetua Titling MT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbClientes.Location = new System.Drawing.Point(0, 106);
-            this.tbClientes.Name = "tbClientes";
-            this.tbClientes.SelectedIndex = 0;
-            this.tbClientes.Size = new System.Drawing.Size(895, 353);
-            this.tbClientes.TabIndex = 1;
+            this.panel1.BackColor = System.Drawing.Color.SkyBlue;
+            this.panel1.BackgroundImage = global::Projeto_Controle_Vendas.Properties.Resources._126227878_1350327091978866_7978048779483913396_n;
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(895, 100);
+            this.panel1.TabIndex = 3;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.SkyBlue;
+            this.label1.Font = new System.Drawing.Font("Perpetua Titling MT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(39, 38);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(334, 25);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Cadastro de Fornecedores";
+            // 
+            // tbFornecedores
+            // 
+            this.tbFornecedores.Controls.Add(this.tabPage1);
+            this.tbFornecedores.Controls.Add(this.tabPage2);
+            this.tbFornecedores.Font = new System.Drawing.Font("Perpetua Titling MT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbFornecedores.Location = new System.Drawing.Point(0, 106);
+            this.tbFornecedores.Name = "tbFornecedores";
+            this.tbFornecedores.SelectedIndex = 0;
+            this.tbFornecedores.Size = new System.Drawing.Size(895, 353);
+            this.tbFornecedores.TabIndex = 4;
             // 
             // tabPage1
             // 
@@ -110,11 +132,9 @@
             this.tabPage1.Controls.Add(this.txtcelular);
             this.tabPage1.Controls.Add(this.label22);
             this.tabPage1.Controls.Add(this.txttelefone);
-            this.tabPage1.Controls.Add(this.txtcpf);
-            this.tabPage1.Controls.Add(this.txtrg);
+            this.tabPage1.Controls.Add(this.txtcnpj);
             this.tabPage1.Controls.Add(this.label23);
             this.tabPage1.Controls.Add(this.label24);
-            this.tabPage1.Controls.Add(this.label25);
             this.tabPage1.Controls.Add(this.txtemail);
             this.tabPage1.Controls.Add(this.label26);
             this.tabPage1.Controls.Add(this.txtnome);
@@ -316,31 +336,23 @@
             this.txttelefone.Size = new System.Drawing.Size(120, 26);
             this.txttelefone.TabIndex = 41;
             // 
-            // txtcpf
+            // txtcnpj
             // 
-            this.txtcpf.Location = new System.Drawing.Point(712, 62);
-            this.txtcpf.Mask = "###,###,###-##";
-            this.txtcpf.Name = "txtcpf";
-            this.txtcpf.Size = new System.Drawing.Size(130, 26);
-            this.txtcpf.TabIndex = 40;
-            // 
-            // txtrg
-            // 
-            this.txtrg.Location = new System.Drawing.Point(497, 62);
-            this.txtrg.Mask = "##,###,###-#";
-            this.txtrg.Name = "txtrg";
-            this.txtrg.Size = new System.Drawing.Size(141, 26);
-            this.txtrg.TabIndex = 39;
+            this.txtcnpj.Location = new System.Drawing.Point(497, 62);
+            this.txtcnpj.Mask = "##,###,###/####-##";
+            this.txtcnpj.Name = "txtcnpj";
+            this.txtcnpj.Size = new System.Drawing.Size(141, 26);
+            this.txtcnpj.TabIndex = 39;
             // 
             // label23
             // 
             this.label23.AutoSize = true;
             this.label23.ForeColor = System.Drawing.Color.Black;
-            this.label23.Location = new System.Drawing.Point(453, 70);
+            this.label23.Location = new System.Drawing.Point(435, 66);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(38, 19);
+            this.label23.Size = new System.Drawing.Size(56, 19);
             this.label23.TabIndex = 38;
-            this.label23.Text = "RG :";
+            this.label23.Text = "cnpj :";
             // 
             // label24
             // 
@@ -351,16 +363,6 @@
             this.label24.Size = new System.Drawing.Size(94, 19);
             this.label24.TabIndex = 37;
             this.label24.Text = "Telefone :";
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.ForeColor = System.Drawing.Color.Black;
-            this.label25.Location = new System.Drawing.Point(662, 70);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(45, 19);
-            this.label25.TabIndex = 36;
-            this.label25.Text = "CPF :";
             // 
             // txtemail
             // 
@@ -413,66 +415,14 @@
             this.label28.TabIndex = 30;
             this.label28.Text = "Código :";
             // 
-            // btnexcluir
-            // 
-            this.btnexcluir.BackColor = System.Drawing.Color.Black;
-            this.btnexcluir.Font = new System.Drawing.Font("Perpetua Titling MT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnexcluir.ForeColor = System.Drawing.Color.Red;
-            this.btnexcluir.Location = new System.Drawing.Point(691, 465);
-            this.btnexcluir.Name = "btnexcluir";
-            this.btnexcluir.Size = new System.Drawing.Size(174, 54);
-            this.btnexcluir.TabIndex = 5;
-            this.btnexcluir.Text = "Excluir";
-            this.btnexcluir.UseVisualStyleBackColor = false;
-            this.btnexcluir.Click += new System.EventHandler(this.btnexcluir_Click);
-            // 
-            // btneditar
-            // 
-            this.btneditar.BackColor = System.Drawing.Color.Black;
-            this.btneditar.Font = new System.Drawing.Font("Perpetua Titling MT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btneditar.ForeColor = System.Drawing.Color.Red;
-            this.btneditar.Location = new System.Drawing.Point(474, 465);
-            this.btneditar.Name = "btneditar";
-            this.btneditar.Size = new System.Drawing.Size(174, 54);
-            this.btneditar.TabIndex = 4;
-            this.btneditar.Text = "Alterar";
-            this.btneditar.UseVisualStyleBackColor = false;
-            this.btneditar.Click += new System.EventHandler(this.btneditar_Click);
-            // 
-            // btnsalvar
-            // 
-            this.btnsalvar.BackColor = System.Drawing.Color.Black;
-            this.btnsalvar.Font = new System.Drawing.Font("Perpetua Titling MT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnsalvar.ForeColor = System.Drawing.Color.Red;
-            this.btnsalvar.Location = new System.Drawing.Point(243, 465);
-            this.btnsalvar.Name = "btnsalvar";
-            this.btnsalvar.Size = new System.Drawing.Size(174, 54);
-            this.btnsalvar.TabIndex = 3;
-            this.btnsalvar.Text = "Salvar";
-            this.btnsalvar.UseVisualStyleBackColor = false;
-            this.btnsalvar.Click += new System.EventHandler(this.btnsalvar_Click);
-            // 
-            // btnnovo
-            // 
-            this.btnnovo.BackColor = System.Drawing.Color.Black;
-            this.btnnovo.Font = new System.Drawing.Font("Perpetua Titling MT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnnovo.ForeColor = System.Drawing.Color.Red;
-            this.btnnovo.Location = new System.Drawing.Point(16, 465);
-            this.btnnovo.Name = "btnnovo";
-            this.btnnovo.Size = new System.Drawing.Size(174, 54);
-            this.btnnovo.TabIndex = 2;
-            this.btnnovo.Text = "Novo";
-            this.btnnovo.UseVisualStyleBackColor = false;
-            this.btnnovo.Click += new System.EventHandler(this.btnnovo_Click);
-            // 
             // tabPage2
             // 
             this.tabPage2.BackgroundImage = global::Projeto_Controle_Vendas.Properties.Resources.va;
             this.tabPage2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.tabPage2.Controls.Add(this.tabelaclientes);
+            this.tabPage2.Controls.Add(this.tabelaFornecedores);
             this.tabPage2.Controls.Add(this.btnpesquisa);
             this.tabPage2.Controls.Add(this.txtpesquisa);
-            this.tabPage2.Controls.Add(this.label1);
+            this.tabPage2.Controls.Add(this.label2);
             this.tabPage2.Location = new System.Drawing.Point(4, 28);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
@@ -480,17 +430,18 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Consulta";
             this.tabPage2.UseVisualStyleBackColor = true;
-            this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
             // 
-            // tabelaclientes
+            // tabelaFornecedores
             // 
-            this.tabelaclientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.tabelaclientes.Location = new System.Drawing.Point(8, 76);
-            this.tabelaclientes.Name = "tabelaclientes";
-            this.tabelaclientes.Size = new System.Drawing.Size(871, 227);
-            this.tabelaclientes.TabIndex = 37;
-            this.tabelaclientes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tabelaclientes_CellClick);
-            this.tabelaclientes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tabelaclientes_CellContentClick);
+            this.tabelaFornecedores.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tabelaFornecedores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.tabelaFornecedores.Location = new System.Drawing.Point(8, 76);
+            this.tabelaFornecedores.Name = "tabelaFornecedores";
+            this.tabelaFornecedores.Size = new System.Drawing.Size(871, 227);
+            this.tabelaFornecedores.TabIndex = 37;
+            this.tabelaFornecedores.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tabelaFornecedores_CellContentClick);
             // 
             // btnpesquisa
             // 
@@ -503,7 +454,6 @@
             this.btnpesquisa.TabIndex = 36;
             this.btnpesquisa.Text = "Pesquisar";
             this.btnpesquisa.UseVisualStyleBackColor = false;
-            this.btnpesquisa.Click += new System.EventHandler(this.btnpesquisa_Click);
             // 
             // txtpesquisa
             // 
@@ -511,67 +461,90 @@
             this.txtpesquisa.Name = "txtpesquisa";
             this.txtpesquisa.Size = new System.Drawing.Size(320, 26);
             this.txtpesquisa.TabIndex = 35;
-            this.txtpesquisa.TextChanged += new System.EventHandler(this.txtpesquisa_TextChanged);
-            this.txtpesquisa.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtpesquisa_KeyPress);
             // 
-            // label1
+            // label2
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(8, 54);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(65, 19);
-            this.label1.TabIndex = 34;
-            this.label1.Text = "Nome :";
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(8, 54);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(65, 19);
+            this.label2.TabIndex = 34;
+            this.label2.Text = "Nome :";
             // 
-            // panel1
+            // btnexcluir
             // 
-            this.panel1.BackColor = System.Drawing.Color.SkyBlue;
-            this.panel1.BackgroundImage = global::Projeto_Controle_Vendas.Properties.Resources._126227878_1350327091978866_7978048779483913396_n;
-            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel1.Controls.Add(this.lbl);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(895, 100);
-            this.panel1.TabIndex = 0;
+            this.btnexcluir.BackColor = System.Drawing.Color.Black;
+            this.btnexcluir.Font = new System.Drawing.Font("Perpetua Titling MT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnexcluir.ForeColor = System.Drawing.Color.Red;
+            this.btnexcluir.Location = new System.Drawing.Point(691, 465);
+            this.btnexcluir.Name = "btnexcluir";
+            this.btnexcluir.Size = new System.Drawing.Size(174, 54);
+            this.btnexcluir.TabIndex = 9;
+            this.btnexcluir.Text = "Excluir";
+            this.btnexcluir.UseVisualStyleBackColor = false;
+            this.btnexcluir.Click += new System.EventHandler(this.btnexcluir_Click);
             // 
-            // lbl
+            // btneditar
             // 
-            this.lbl.AutoSize = true;
-            this.lbl.BackColor = System.Drawing.Color.SkyBlue;
-            this.lbl.Font = new System.Drawing.Font("Perpetua Titling MT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl.ForeColor = System.Drawing.Color.Black;
-            this.lbl.Location = new System.Drawing.Point(39, 38);
-            this.lbl.Name = "lbl";
-            this.lbl.Size = new System.Drawing.Size(263, 25);
-            this.lbl.TabIndex = 0;
-            this.lbl.Text = "Cadastro de Clientes";
-            this.lbl.Click += new System.EventHandler(this.label1_Click);
+            this.btneditar.BackColor = System.Drawing.Color.Black;
+            this.btneditar.Font = new System.Drawing.Font("Perpetua Titling MT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btneditar.ForeColor = System.Drawing.Color.Red;
+            this.btneditar.Location = new System.Drawing.Point(474, 465);
+            this.btneditar.Name = "btneditar";
+            this.btneditar.Size = new System.Drawing.Size(174, 54);
+            this.btneditar.TabIndex = 8;
+            this.btneditar.Text = "Alterar";
+            this.btneditar.UseVisualStyleBackColor = false;
+            this.btneditar.Click += new System.EventHandler(this.btneditar_Click);
             // 
-            // Frmclientes
+            // btnsalvar
+            // 
+            this.btnsalvar.BackColor = System.Drawing.Color.Black;
+            this.btnsalvar.Font = new System.Drawing.Font("Perpetua Titling MT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnsalvar.ForeColor = System.Drawing.Color.Red;
+            this.btnsalvar.Location = new System.Drawing.Point(243, 465);
+            this.btnsalvar.Name = "btnsalvar";
+            this.btnsalvar.Size = new System.Drawing.Size(174, 54);
+            this.btnsalvar.TabIndex = 7;
+            this.btnsalvar.Text = "Salvar";
+            this.btnsalvar.UseVisualStyleBackColor = false;
+            this.btnsalvar.Click += new System.EventHandler(this.btnsalvar_Click);
+            // 
+            // btnnovo
+            // 
+            this.btnnovo.BackColor = System.Drawing.Color.Black;
+            this.btnnovo.Font = new System.Drawing.Font("Perpetua Titling MT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnnovo.ForeColor = System.Drawing.Color.Red;
+            this.btnnovo.Location = new System.Drawing.Point(16, 465);
+            this.btnnovo.Name = "btnnovo";
+            this.btnnovo.Size = new System.Drawing.Size(174, 54);
+            this.btnnovo.TabIndex = 6;
+            this.btnnovo.Text = "Novo";
+            this.btnnovo.UseVisualStyleBackColor = false;
+            this.btnnovo.Click += new System.EventHandler(this.btnnovo_Click);
+            // 
+            // FrmFornecedores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.LightSkyBlue;
             this.ClientSize = new System.Drawing.Size(895, 531);
             this.Controls.Add(this.btnexcluir);
             this.Controls.Add(this.btneditar);
             this.Controls.Add(this.btnsalvar);
             this.Controls.Add(this.btnnovo);
-            this.Controls.Add(this.tbClientes);
+            this.Controls.Add(this.tbFornecedores);
             this.Controls.Add(this.panel1);
-            this.Name = "Frmclientes";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Frmclientes";
-            this.Load += new System.EventHandler(this.Frmclientes_Load);
-            this.tbClientes.ResumeLayout(false);
+            this.Name = "FrmFornecedores";
+            this.Text = "Cadastro de Fornecedores";
+            this.Load += new System.EventHandler(this.FrmFornecedores_Load);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.tbFornecedores.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tabelaclientes)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tabelaFornecedores)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -579,14 +552,10 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label lbl;
-        private System.Windows.Forms.TabControl tbClientes;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TabControl tbFornecedores;
         private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.Button btnnovo;
-        private System.Windows.Forms.Button btnsalvar;
-        private System.Windows.Forms.Button btneditar;
-        private System.Windows.Forms.Button btnexcluir;
+        private System.Windows.Forms.Button btncep;
         private System.Windows.Forms.ComboBox cbbuf;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.TextBox txtcidade;
@@ -604,21 +573,23 @@
         private System.Windows.Forms.MaskedTextBox txtcelular;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.MaskedTextBox txttelefone;
-        private System.Windows.Forms.MaskedTextBox txtcpf;
-        private System.Windows.Forms.MaskedTextBox txtrg;
+        private System.Windows.Forms.MaskedTextBox txtcnpj;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.Label label25;
         private System.Windows.Forms.TextBox txtemail;
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.TextBox txtnome;
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.TextBox txtcodigo;
         private System.Windows.Forms.Label label28;
-        private System.Windows.Forms.DataGridView tabelaclientes;
+        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.DataGridView tabelaFornecedores;
         private System.Windows.Forms.Button btnpesquisa;
         private System.Windows.Forms.TextBox txtpesquisa;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btncep;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnexcluir;
+        private System.Windows.Forms.Button btneditar;
+        private System.Windows.Forms.Button btnsalvar;
+        private System.Windows.Forms.Button btnnovo;
     }
 }

@@ -53,12 +53,15 @@ namespace Projeto_Controle_Vendas.VIEW
         private void btnpesquisa_Click(object sender, EventArgs e)
         {
             string nome = txtpesquisa.Text;
+            /*string cpf = txtpesquisa.Text;*/
             ClienteDAO dao = new ClienteDAO();
 
             tabelaclientes.DataSource = dao.BuscarClientePorNome(nome);
+            /*tabelaclientes.DataSource = dao.BuscarClientePorCPF(cpf);*/
 
-            if (tabelaclientes.Rows.Count == 0) 
+            if (tabelaclientes.Rows.Count == 0 || txtpesquisa.Text == string.Empty) 
             {
+                MessageBox.Show("Cliente não encontrado");
                 tabelaclientes.DataSource = dao.listarClientes();
             }
 
@@ -155,7 +158,7 @@ namespace Projeto_Controle_Vendas.VIEW
 
         private void txtpesquisa_TextChanged(object sender, EventArgs e)
         {
-
+           
         }
 
         //botao consultar cep

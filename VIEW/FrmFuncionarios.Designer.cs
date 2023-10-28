@@ -414,7 +414,7 @@
             // txtcpf
             // 
             this.txtcpf.Location = new System.Drawing.Point(323, 52);
-            this.txtcpf.Mask = "###.###.###-##";
+            this.txtcpf.Mask = "###,###,###-##";
             this.txtcpf.Name = "txtcpf";
             this.txtcpf.Size = new System.Drawing.Size(130, 26);
             this.txtcpf.TabIndex = 40;
@@ -422,7 +422,7 @@
             // txtrg
             // 
             this.txtrg.Location = new System.Drawing.Point(68, 57);
-            this.txtrg.Mask = "##.###.###-#";
+            this.txtrg.Mask = "##,###,###-#";
             this.txtrg.Name = "txtrg";
             this.txtrg.Size = new System.Drawing.Size(141, 26);
             this.txtrg.TabIndex = 39;
@@ -552,6 +552,7 @@
             this.txtpesquisa.Name = "txtpesquisa";
             this.txtpesquisa.Size = new System.Drawing.Size(320, 26);
             this.txtpesquisa.TabIndex = 35;
+            this.txtpesquisa.TextChanged += new System.EventHandler(this.txtpesquisa_TextChanged);
             // 
             // label2
             // 
@@ -584,7 +585,7 @@
             this.btneditar.Name = "btneditar";
             this.btneditar.Size = new System.Drawing.Size(174, 54);
             this.btneditar.TabIndex = 8;
-            this.btneditar.Text = "Editar";
+            this.btneditar.Text = "Alterar";
             this.btneditar.UseVisualStyleBackColor = false;
             this.btneditar.Click += new System.EventHandler(this.btneditar_Click);
             // 
