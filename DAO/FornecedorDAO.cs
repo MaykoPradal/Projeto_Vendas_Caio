@@ -66,8 +66,7 @@ namespace Projeto_Controle_Vendas.DAO
 
         #region Listar todos fornecedores
         public DataTable listarFornecedores()
-        {
-            
+        {  
             {
                 try
                 {
@@ -86,21 +85,83 @@ namespace Projeto_Controle_Vendas.DAO
 
                     //4 passo - Fechar conexão
                     conexao.Close();
-
                     return tabelafornecedores;
 
                 }
                 catch (Exception erro)
                 {
-
                     MessageBox.Show("Erro ao executar o comando sql: " + erro);
                     return null;
                 }
-
-
             }
         }
 
+        #endregion
+
+        #region Listar fornecedores por nome
+        public DataTable listarFornecedorPorNome(string nome)
+        {
+            try
+            {
+                //1 passo - criar o DataTable e o comando sql
+                DataTable tabelafornecedores = new DataTable();
+                string sql = "select * from tb_fornecedores where nome like @nome";
+
+                //2 passo - Organizar o comando sql e executar
+                MySqlCommand executacmd = new MySqlCommand(sql, conexao);
+                executacmd.Parameters.AddWithValue("@nome", nome);
+                conexao.Open();
+                executacmd.ExecuteNonQuery();
+
+                //3 passo - Criar o MySqlAdapter para preencher os dados do DataTable 
+                MySqlDataAdapter da = new MySqlDataAdapter(executacmd);
+                da.Fill(tabelafornecedores);
+
+                //4 passo - fechar conexão
+                conexao.Close();
+                return tabelafornecedores;
+
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show("Aconteceu o erro ao executar o comando sql : " + erro);
+                return null;
+            }
+        }
+        #endregion
+
+        #region Buscar um fornecedor por nome
+        public DataTable buscarUmFornecedorPorNome (string nome) 
+        {
+            try
+            {
+                //1 passo - criar o DataTable e o comando sql
+                DataTable tabelafornecedores = new DataTable ();
+                string sql = "select * from tb_fornecedores where nome = @nome";
+
+                //2 passo - Organizar o comando sql e executar
+                MySqlCommand executacmd = new MySqlCommand(sql,conexao);
+                executacmd.Parameters.AddWithValue("@nome", nome);
+                conexao.Open();
+                executacmd.ExecuteNonQuery();
+
+                //3 passo - Criar o MySqlAdapter para preencher os dados do DataTable
+                MySqlDataAdapter da = new MySqlDataAdapter(executacmd);
+                da.Fill (tabelafornecedores);
+                
+                //4 passo - fechar conexão sql
+                conexao.Close();
+                return tabelafornecedores;
+
+            }
+
+            //Mensagem indicando se aconteceu um erro
+            catch (Exception erro)
+            {
+                MessageBox.Show("Aconteceu o erro no comando sql :" + nome);
+                return null;
+            }
+        }
         #endregion
 
         #region método para alterar um fornecedor

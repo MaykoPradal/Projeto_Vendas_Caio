@@ -148,5 +148,29 @@ namespace Projeto_Controle_Vendas.VIEW
 
             new Helpers().LimparTela(this);
         }
+
+        //Botão pesquisar 
+        private void btnpesquisa_Click(object sender, EventArgs e)
+        {
+            string nome = txtpesquisa.Text;
+            FornecedorDAO dao = new FornecedorDAO();
+
+                tabelaFornecedores.DataSource = dao.buscarUmFornecedorPorNome(nome);
+
+            if (tabelaFornecedores.Rows.Count == 0 )
+                {
+                    MessageBox.Show("Nenhum fornecedor encontrado com esse nome");
+                    //Recarregar o DataGridView
+                    tabelaFornecedores.DataSource = dao.listarFornecedores();
+                }
+        }
+
+        private void txtpesquisa_TextChanged(object sender, EventArgs e)
+        {
+            string nome = "%" + txtpesquisa.Text + "%";
+
+            FornecedorDAO dao = new FornecedorDAO();
+            tabelaFornecedores.DataSource = dao.listarFornecedorPorNome(nome);
+        }
     }
 }

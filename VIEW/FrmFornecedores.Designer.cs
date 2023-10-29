@@ -454,6 +454,7 @@
             this.btnpesquisa.TabIndex = 36;
             this.btnpesquisa.Text = "Pesquisar";
             this.btnpesquisa.UseVisualStyleBackColor = false;
+            this.btnpesquisa.Click += new System.EventHandler(this.btnpesquisa_Click);
             // 
             // txtpesquisa
             // 
@@ -461,6 +462,7 @@
             this.txtpesquisa.Name = "txtpesquisa";
             this.txtpesquisa.Size = new System.Drawing.Size(320, 26);
             this.txtpesquisa.TabIndex = 35;
+            this.txtpesquisa.TextChanged += new System.EventHandler(this.txtpesquisa_TextChanged);
             // 
             // label2
             // 
